@@ -21,7 +21,7 @@ public class ClienteController {
 	@GetMapping("/clientes")
 	public String Clientes(Model model) {
 		
-		Query query = entityManager.createQuery("select c from Cliente c", Cliente.class);
+		Query query = entityManager.createQuery("select c from Cliente c order by c.nome", Cliente.class);
 		List<Cliente> clientes = query.getResultList();
 		
 		model.addAttribute("clientes", clientes);
