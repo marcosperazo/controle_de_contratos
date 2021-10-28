@@ -10,8 +10,16 @@
 			
 			<div class="card" th:each="cliente: ${clientes}">
 				<div class="card-header">
-					<div><span th:text="${cliente.nome}">nome</span></div>
-					<button type="button" class="btn btn-outline-info">Detalhar</button>
+				
+					<div class="row">
+						
+						<div class="col-10"><span th:text="${cliente.nome}">nome</span></div>
+						<div class="col-2">
+							<button type="button" class="btn btn-outline-info">Detalhar</button>
+						</div>
+						
+					</div>
+					
 				</div>
 				<div type="hidden" class="card-body">
 					<div>CPF: <span th:text="${cliente.cpf}">cpf</span></div>

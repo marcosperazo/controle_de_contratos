@@ -2,28 +2,24 @@ package com.perazo.controle_de_contratos.controller;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.PersistenceContext;
-import javax.persistence.Query;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 import com.perazo.controle_de_contratos.model.Cliente;
+import com.perazo.controle_de_contratos.repository.ClienteRepository;
 
 @Controller
 public class ClienteController {
 
-	@PersistenceContext
-	private EntityManager entityManager;
-	
+	@Autowired
+	private ClienteRepository clienteRepository;
+
 	@GetMapping("/clientes")
 	public String Clientes(Model model) {
 		
-		Query query = entityManager.createQuery("select c from Cliente c order by c.nome", Cliente.class);
-		List<Cliente> clientes = query.getResultList();
-		
+		List<Cliente> clientes = clienteRepository.findAll();
 		model.addAttribute("clientes", clientes);
 		return "clientes";
 	}
