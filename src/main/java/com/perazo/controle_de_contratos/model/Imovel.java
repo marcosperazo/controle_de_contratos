@@ -2,6 +2,7 @@ package com.perazo.controle_de_contratos.model;
 
 import java.math.BigDecimal;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,7 +15,10 @@ public class Imovel {
 
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(length = 50)
 	private String apelido;
+	@Column(length = 20)
 	private String inscricaoMunicipal;
 	private String endereco;
 	private BigDecimal valorCondominio;

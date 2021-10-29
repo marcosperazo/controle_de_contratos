@@ -28,7 +28,6 @@ public class Contrato {
 	
 	private BigDecimal valorAluguel;
 	private LocalDate dataContratacao;
-	private Period periodo;
 	private LocalDate dataFim;
 	private LocalDate dataReajuste;
 	private LocalDate dataPagamento;
@@ -57,12 +56,6 @@ public class Contrato {
 	}
 	public void setDataContratacao(LocalDate dataContratacao) {
 		this.dataContratacao = dataContratacao;
-	}
-	public Period getPeriodo() {
-		return periodo;
-	}
-	public void setPeriodo(Period periodo) {
-		this.periodo = periodo;
 	}
 	public LocalDate getDataFim() {
 		return dataFim;

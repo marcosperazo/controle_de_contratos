@@ -1,5 +1,6 @@
 package com.perazo.controle_de_contratos.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,14 +13,24 @@ public class Cliente {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@Column(length = 14)
 	private String cpf;
+	@Column(length = 100)
 	private String nome;
+	@Column(length = 20)
 	private String identidade;
+	@Column(length = 100)
 	private String telefone;
+	@Column(length = 50)
 	private String email;
+	@Column(length = 100)
 	private String representante;
+	@Column(length = 100)
 	private String telefoneRepresentante;
+	@Column(length = 20)
 	private String emailRepresentante;
+	@Column(length = 255)
 	private String observacao;
 	
 
