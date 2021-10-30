@@ -1,17 +1,42 @@
 package com.perazo.controle_de_contratos.dto;
 
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
 import com.perazo.controle_de_contratos.model.Cliente;
 
 public class RequisicaoNovoCliente {
 
+	@NotBlank
+	@Size(min = 11, max = 14)
 	private String cpfCliente;
+	
+	@NotBlank
+	@Size(min = 10, max = 100)
 	private String nomeCliente;
+	
+	@Size(min = 0, max = 20)
 	private String identidadeCliente;
+	
+	@Email	
+	@Size(min = 0, max = 50)
 	private String emailCliente;
+
+	@Size(min = 0, max = 20)
 	private String telefoneCliente;
+	
+	@Size(min = 10, max = 100)
 	private String nomeRepresentanteCliente;
+	
+	@Email
+	@Size(min = 0, max = 50)
 	private String emailRepresentanteCliente;
+	
+	@Size(min = 0, max = 20)
 	private String telefoneRepresentanteCliente;
+
+	@Size(min = 0, max = 255)
 	private String observacaoCliente;
 	
 	public String getCpfCliente() {

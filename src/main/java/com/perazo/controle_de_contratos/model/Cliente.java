@@ -20,15 +20,15 @@ public class Cliente {
 	private String nome;
 	@Column(length = 20)
 	private String identidade;
-	@Column(length = 100)
+	@Column(length = 20)
 	private String telefone;
 	@Column(length = 50)
 	private String email;
 	@Column(length = 100)
 	private String representante;
-	@Column(length = 100)
-	private String telefoneRepresentante;
 	@Column(length = 20)
+	private String telefoneRepresentante;
+	@Column(length = 50)
 	private String emailRepresentante;
 	@Column(length = 255)
 	private String observacao;
