@@ -42,60 +42,73 @@
 					
 			<form action="/clientes/novo" method="post">
 			
-				<div>
-					<label for="cpfCliente">CPF</label>
-					<input name="cpfCliente" placeholder="CPF do cliente"/>
-					<small>Informe o CPF do cliente</small>				
+				<div class="mb-3 row">
+					<label for="cpfCliente" class="form-label col-sm-2">CPF</label>
+					<div class="col-sm-10">
+						<input class="form-control" name="cpfCliente" placeholder="000.000.000-00"/>
+					</div>				
 				</div>
 				
-				<div>
-					<label for="nomeCliente">Nome</label>
-					<input name="nomeCliente" placeholder="nome do cliente"/>
-					<small>Informe o nome do cliente</small>				
+				<div class="mb-3 row">
+					<label for="nomeCliente" class="form-label col-sm-2">Nome</label>
+					<div class="col-sm-10">
+						<input class="form-control" name="nomeCliente" placeholder="nome do cliente"/>
+					</div>
+									
 				</div>				
 				
-				<div>
-					<label for="identidadeCliente">Identidade</label>
-					<input name="identidadeCliente" placeholder="identidade do cliente"/>
-					<small>Informe o número da identidade do cliente</small>				
+				<div class="mb-3 row">
+					<label for="identidadeCliente" class="form-label col-sm-2">Identidade</label>
+					<div class="col-sm-10">
+						<input class="form-control" name="identidadeCliente" placeholder="identidade do cliente"/>
+					</div>				
 				</div>
 								
-				<div>
-					<label for="emailCliente">E-Mail</label>
-					<input name="emailCliente" placeholder="E-Mail do cliente"/>
-					<small>Informe o E-Mail do cliente</small>				
+				<div class="mb-3 row">
+					<label for="emailCliente" class="form-label col-sm-2">E-Mail</label>
+					<div class="col-sm-10">
+						<input class="form-control" name="emailCliente" placeholder="e-mail do cliente"/>
+					</div>				
 				</div>				
-				<div>
+				<div class="mb-3 row">
 				
-					<label for="telefoneCliente">Telefone</label>
-					<input name="telefoneCliente" placeholder="telefone do cliente"/>
-					<small>Informe o telefone do cliente</small>				
-				</div>				
-				
-				<div>
-					<label for="nomeRepresentanteCliente">Nome do representante</label>
-					<input name="nomeRepresentanteCliente" placeholder="nome do representante do cliente"/>
-					<small>Informe o nome do representante do cliente</small>				
+					<label for="telefoneCliente" class="form-label col-sm-2">Telefone</label>
+					<div class="col-sm-10">
+						<input class="form-control" name="telefoneCliente" placeholder="(00) 00000-0000"/>
+					</div>				
 				</div>				
 				
-				<div>
-					<label for="emailRepresentanteCliente">E-Mail do representante</label>
-					<input name="emailRepresentanteCliente" placeholder="e-mail do representante do cliente"/>
-					<small>Informe o E-Mail do representante do cliente</small>				
+				<div class="mb-3 row">
+					<label for="nomeRepresentanteCliente" class="form-label col-sm-2">Nome do representante</label>
+					<div class="col-sm-10">
+						<input class="form-control" name="nomeRepresentanteCliente" placeholder="nome do representante do cliente"/>
+					</div>				
 				</div>				
 				
-				<div>
-					<label for="telefoneRepresentanteCliente">Telefone do representante</label>
-					<input name="telefoneRepresentanteCliente" placeholder="telefone do representante do cliente"/>
-					<small>Informe o telefone do representante do cliente</small>				
+				<div class="mb-3 row">
+					<label for="emailRepresentanteCliente" class="form-label col-sm-2">E-Mail do representante</label>
+					<div class="col-sm-10">
+						<input class="form-control" name="emailRepresentanteCliente" placeholder="e-mail do representante do cliente"/>
+					</div>				
+				</div>				
+				
+				<div class="mb-3 row">
+					<label for="telefoneRepresentanteCliente" class="form-label col-sm-2">Telefone do representante</label>
+					<div class="col-sm-10">
+						<input class="form-control" name="telefoneRepresentanteCliente" placeholder="(00) 00000-0000"/>									
+					</div>
 				</div>
 				
-				<div>
-					<label for="observacaoCliente">Observações</label>
-					<textarea name="observacaoCliente" placeholder="observações"></textarea>/>
-					<small>Observações</small>				
-				</div>											
-				<button type="submit">Cadastrar</button>
+				<div class="mb-3 row">
+					<label for="observacaoCliente" class="form-label col-sm-2">Observações</label>
+					<div class="col-sm-10">					
+					<textarea class="form-control" name="observacaoCliente" placeholder="Observações"></textarea>									
+					</div>
+				</div>
+				<div>											
+					<button class="btn btn-secondary" type="submit">Cadastrar</button>
+				</div>
+			
 			</form>
 			
 			

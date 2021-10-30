@@ -2,7 +2,6 @@ package com.perazo.controle_de_contratos.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
-import java.time.Period;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
