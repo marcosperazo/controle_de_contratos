@@ -47,7 +47,7 @@ public class ClienteController {
 		Cliente cliente = requisicao.toCliente();
 		clienteRepository.save(cliente);
 		
-		return "cliente/formulario";
+		return "redirect:/clientes";
 	}
 	
 }

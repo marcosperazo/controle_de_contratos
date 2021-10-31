@@ -1,5 +1,8 @@
 package com.perazo.controle_de_contratos.dto;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Size;
@@ -7,6 +10,9 @@ import javax.validation.constraints.Size;
 import com.perazo.controle_de_contratos.model.Cliente;
 
 public class RequisicaoNovoCliente {
+	
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
 	@NotBlank
 	@Size(min = 11, max = 14)
@@ -26,7 +32,7 @@ public class RequisicaoNovoCliente {
 	@Size(min = 0, max = 20)
 	private String telefoneCliente;
 	
-	@Size(min = 10, max = 100)
+	@Size(min = 0, max = 100)
 	private String nomeRepresentanteCliente;
 	
 	@Email
@@ -93,9 +99,11 @@ public class RequisicaoNovoCliente {
 	public void setObservacaoCliente(String observacaoCliente) {
 		this.observacaoCliente = observacaoCliente;
 	}
+
 	public Cliente toCliente() {
 		
 		Cliente cliente = new Cliente();
+		
 		cliente.setCpf(cpfCliente);
 		cliente.setNome(nomeCliente);
 		cliente.setIdentidade(identidadeCliente);
