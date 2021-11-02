@@ -34,6 +34,9 @@ public class Cliente {
 	private String observacao;
 	
 
+	public Long getId() {
+		return id;
+	}
 	public String getCpf() {
 		return cpf;
 	}
@@ -94,5 +97,6 @@ public class Cliente {
 		
 		return "Cliente: " + nome;
 	}
+	
 	
 }

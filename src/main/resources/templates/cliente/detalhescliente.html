@@ -8,7 +8,7 @@
 	
 	
 		<div class="container">
-			<div th:replace="~{base :: titulo('clientes')}"></div>
+			<div th:replace="~{base :: titulo(${cliente.nome})}"></div>
 			
 			<nav class="navbar navbar-expand navbar-light bg-light d-flex justify-content-between mb-3">
 				<div class="container-fluid">
@@ -22,7 +22,7 @@
 				     	</div>
 				     	<div class="navbar-nav">
 						    <a class="nav-link" aria-current="page" href="/">Home</a>				        	
-						    <a class="nav-link disabled" href="/clientes">Clientes</a>
+						    <a class="nav-link" href="/clientes">Clientes</a>
 						    <a class="nav-link" href="/imoveis">Imóveis</a>				        		
 						    <a class="nav-link" href="/contratos">Contratos</a>
 					    </div>	   	
@@ -30,31 +30,17 @@
 				    </div>  	
 			    	<div class="collapse navbar-collapse d-flex d-md-flex justify-content-md-end" >
    						<a href="/clientes/formulario"><button class="btn btn-sm btn-outline-secondary" type="button">Novo</button></a>
-   					</div>			    	
+   					</div>
+			    	
 				</div>
 			</nav>
 		
-
-
-
-		
-			
-			<div class="card" th:each="cliente: ${clientes}">
-			
-				<div class="card-header">
-				
-					<div class="container-fluid d-flex justify-content-between">
-						
-						<div><span th:text="${cliente.nome}">nome</span></div>
-						<div>
-							<a th:href= @{/clientes/{id}(id=${cliente.id})}><button type="button" class="btn btn-sm btn-outline-secondary">Detalhar</button></a>
-						</div>						
-					</div>					
-				</div>				
-			</div>
-			
-			
-			
+			<div th:text="${cliente.nome}"></div>						
+			<div><span th:text="${cliente.nome}">nome</span></div>
+			<div>CPF: <span th:text="${cliente.cpf}">cpf</span></div>
+			<div>Telefone: <span th:text="${cliente.telefone}">telefone</span></div>
+					
+								
 		</div>
 	</body>
 

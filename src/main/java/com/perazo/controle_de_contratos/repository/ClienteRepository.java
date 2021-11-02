@@ -7,7 +7,7 @@ import com.perazo.controle_de_contratos.model.Cliente;
 
 @Repository
 public interface ClienteRepository extends JpaRepository<Cliente, Long> {
-		
-		
+
+	Cliente findById(Cliente id);
 		
 }

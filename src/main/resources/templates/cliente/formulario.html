@@ -41,57 +41,57 @@
 			<div class="card">	
 				<form th:object="${requisicaoNovoCliente}" class="card-body" action="/clientes/novo" method="post">
 				
-					<div class="form-group">
-						<label for="cpfCliente" class="form-label">CPF</label>						
+					<div class="form-group mb-3">
+						<label for="cpfCliente" class="form-label mb-0">CPF</label>						
 						<input th:field="*{cpfCliente}" th:errorclass="is-invalid" class="form-control" placeholder="000.000.000-00"/>						
 						<div th:errors="*{cpfCliente}" class="invalid-feedback"></div>				
 					</div>
 					
-					<div class="form-group">
-						<label for="nomeCliente" class="form-label">Nome</label>					
+					<div class="form-group mb-3">
+						<label for="nomeCliente" class="form-label mb-0">Nome</label>					
 						<input th:field="*{nomeCliente}" th:errorclass="is-invalid" class="form-control" placeholder="nome do cliente"/>					
 						<div th:errors="*{nomeCliente}" class="invalid-feedback"></div>
 										
 					</div>				
 					
-					<div class="form-group">
-						<label for="identidadeCliente" class="form-label">Identidade</label>
+					<div class="form-group mb-3">
+						<label for="identidadeCliente" class="form-label mb-0">Identidade</label>
 						<input th:field="*{identidadeCliente}" th:errorclass="is-invalid" class="form-control" placeholder="identidade do cliente"/>
 						<div th:errors="*{identidadeCliente}" class="invalid-feedback"></div>			
 					</div>
 									
-					<div class="form-group">
-						<label for="emailCliente" class="form-label">E-Mail</label>						
+					<div class="form-group mb-3">
+						<label for="emailCliente" class="form-label mb-0">E-Mail</label>						
 						<input th:field="*{emailCliente}" th:errorclass="is-invalid" class="form-control" placeholder="e-mail do cliente"/>
 						<div th:errors="*{emailCliente}" class="invalid-feedback"></div>			
 					</div>				
-					<div class="form-group">
+					<div class="form-group mb-3">
 					
-						<label for="telefoneCliente" class="form-label">Telefone</label>						
+						<label for="telefoneCliente" class="form-label mb-0">Telefone</label>						
 						<input th:field="*{telefoneCliente}" th:errorclass="is-invalid" class="form-control" placeholder="(00) 00000-0000"/>
 						<div th:errors="*{telefoneCliente}" class="invalid-feedback"></div>					
 					</div>				
 					
-					<div class="form-group">
-						<label for="nomeRepresentanteCliente" class="form-label">Nome do representante</label>						
+					<div class="form-group mb-3">
+						<label for="nomeRepresentanteCliente" class="form-label mb-0">Nome do representante</label>						
 						<input th:field="*{nomeRepresentanteCliente}" th:errorclass="is-invalid" class="form-control" placeholder="nome do representante do cliente"/>
 						<div th:errors="*{nomeRepresentanteCliente}" class="invalid-feedback"></div>				
 					</div>				
 					
-					<div class="form-group">
-						<label for="emailRepresentanteCliente" class="form-label">E-Mail do representante</label>					
+					<div class="form-group mb-3">
+						<label for="emailRepresentanteCliente" class="form-label mb-0">E-Mail do representante</label>					
 						<input th:field="*{emailRepresentanteCliente}" th:errorclass="is-invalid" class="form-control" placeholder="e-mail do representante do cliente"/>
 						<div th:errors="*{emailRepresentanteCliente}" class="invalid-feedback"></div>			
 					</div>				
 					
-					<div class="form-group">
-						<label for="telefoneRepresentanteCliente" class="form-label">Telefone do representante</label>
+					<div class="form-group mb-3">
+						<label for="telefoneRepresentanteCliente" class="form-label mb-0">Telefone do representante</label>
 						<input th:field="*{telefoneRepresentanteCliente}" th:errorclass="is-invalid" class="form-control" placeholder="(00) 00000-0000"/>									
 						<div th:errors="*{telefoneRepresentanteCliente}" class="invalid-feedback"></div>	
 					</div>
 					
-					<div class="form-group">
-						<label for="observacaoCliente" class="form-label">Observações</label>										
+					<div class="form-group mb-3">
+						<label for="observacaoCliente" class="form-label mb-0">Observações</label>										
 						<textarea th:field="*{observacaoCliente}" th:errorclass="is-invalid" class="form-control" placeholder="Observações"></textarea>									
 						<div th:errors="*{observacaoCliente}" class="invalid-feedback"></div>
 					</div>
