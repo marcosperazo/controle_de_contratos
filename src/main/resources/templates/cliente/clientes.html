@@ -7,7 +7,7 @@
 		<div th:replace="~{base :: login}"></div>
 	
 	
-		<div class="container">
+		<div class="container mb-3">
 			<div th:replace="~{base :: titulo('clientes')}"></div>
 			
 			<nav class="navbar navbar-expand navbar-light bg-light d-flex justify-content-between mb-3">
@@ -35,27 +35,27 @@
 			</nav>
 		
 
-
-
-		
 			
-			<div class="card" th:each="cliente: ${clientes}">
-			
-				<div class="card-header">
+				<!-- Lista de clientes -->
+				<ul class="list-group">
 				
-					<div class="container-fluid d-flex justify-content-between">
+					<li th:each="cliente: ${clientes}" class="list-group-item list-group-item-secondary d-flex justify-content-between">
 						
-						<div><span th:text="${cliente.nome}">nome</span></div>
-						<div>
-							<a th:href= @{/clientes/{id}(id=${cliente.id})}><button type="button" class="btn btn-sm btn-outline-secondary">Detalhar</button></a>
-						</div>						
-					</div>					
-				</div>				
-			</div>
-			
-			
-			
-		</div>
+						<a th:href= @{/clientes/{id}(id=${cliente.id})} class="list-group-item list-group-item-action list-group-item-secondary">
+							<span th:text="${cliente.nome}">nome</span>
+						</a>
+											
+					</li>					
+				</ul>								
+		</div>			
+		
+		
+		
+		<!-- Footer -->
+		<footer>
+			<div th:replace="~{base :: footer}"></div>		
+		</footer>
+		
 	</body>
 
 

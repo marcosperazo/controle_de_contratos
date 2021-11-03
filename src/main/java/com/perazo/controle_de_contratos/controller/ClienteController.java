@@ -68,5 +68,11 @@ public class ClienteController {
 			return new ModelAndView( "redirect:/clientes");
 			
 		}		
-	}	
+	}
+	
+	/*
+	 * @ExceptionHandler(IllegalArgumentException.class) public String onError() {
+	 * return "redirect:/clientes"; }
+	 */
+	
 }

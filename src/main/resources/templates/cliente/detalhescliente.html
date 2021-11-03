@@ -10,7 +10,7 @@
 		<div class="container">
 			<div th:replace="~{base :: titulo(${cliente.nome})}"></div>
 			
-			<nav class="navbar navbar-expand navbar-light bg-light d-flex justify-content-between mb-3">
+			<nav class="navbar navbar-expand navbar-light bg-light mb-3">
 				<div class="container-fluid">
 					
 					<div class="collapse navbar-collapse">
@@ -28,20 +28,30 @@
 					    </div>	   	
 					   
 				    </div>  	
-			    	<div class="collapse navbar-collapse d-flex d-md-flex justify-content-md-end" >
-   						<a href="/clientes/formulario"><button class="btn btn-sm btn-outline-secondary" type="button">Novo</button></a>
-   					</div>
-			    	
 				</div>
 			</nav>
 		
-			<div th:text="${cliente.nome}"></div>						
-			<div><span th:text="${cliente.nome}">nome</span></div>
-			<div>CPF: <span th:text="${cliente.cpf}">cpf</span></div>
-			<div>Telefone: <span th:text="${cliente.telefone}">telefone</span></div>
-					
+		
+			<!-- Detalhes do Cliente -->
+			<ul class="list-group mb-3">
+				<li class="list-group-item list-group-item-secondary">CPF: <span th:text="${cliente.cpf}">cpf</span></li>
+				<li class="list-group-item list-group-item-secondary">Nome: <span th:text="${cliente.nome}">nome</span></li>
+				<li class="list-group-item list-group-item-secondary">Identidade: <span th:text="${cliente.identidade}">identidade</span></li>
+				<li class="list-group-item list-group-item-secondary">Telefone: <span th:text="${cliente.telefone}">telefone</span></li>
+				<li class="list-group-item list-group-item-secondary">E-mail: <span th:text="${cliente.email}">e-mail</span></li>
+				<li class="list-group-item list-group-item-secondary">Representante: <span th:text="${cliente.representante}">nome</span></li>
+				<li class="list-group-item list-group-item-secondary">Telefone do representante: <span th:text="${cliente.telefoneRepresentante}">telefone</span></li>
+				<li class="list-group-item list-group-item-secondary">E-mail do representante: <span th:text="${cliente.emailRepresentante}">e-mail</span></li>
+				<li class="list-group-item list-group-item-secondary">Observações: <span th:text="${cliente.observacao}">Observacoes</span></li>	
+			</ul>
 								
 		</div>
+		
+		
+		<!-- Footer -->
+		<footer>
+			<div th:replace="~{base :: footer}"></div>		
+		</footer>
 	</body>
 
 
