@@ -54,25 +54,12 @@ public class ClienteController {
 	}
 	
 	@GetMapping("/{id}")
-	public ModelAndView clientedetalhes(@PathVariable Long id) {
-		Optional<Cliente> optional = this.clienteRepository.findById(id);
-		if(optional.isPresent()) {
-			Cliente cliente = optional.get();
-			ModelAndView mv = new ModelAndView();
-			mv.setViewName("cliente/detalhescliente");
-			mv.addObject("cliente", cliente);
-			return mv;
-			
-		} else {
-			System.out.println("$$$$$$$ NÃO ENCONTROU O CLIENTE COM ID " + id + " $$$$$$$");
-			return new ModelAndView( "redirect:/clientes");
-			
-		}		
+	public String clientedetalhes(@PathVariable("id") Long id, Model model) {
+		Cliente cliente = clienteRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("id " + id + " é inválido"));
+		model.addAttribute("cliente", cliente);
+		return "cliente/detalhescliente";
 	}
+		
 	
-	/*
-	 * @ExceptionHandler(IllegalArgumentException.class) public String onError() {
-	 * return "redirect:/clientes"; }
-	 */
 	
 }
