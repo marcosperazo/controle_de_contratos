@@ -1,0 +1,49 @@
+.logo-container{
+	background-color: #a9a9a9;
+	color: black;
+}
+.logo{
+	font-family: 'Handlee', cursive;
+	font-size: 2.5rem;
+}
+#barra-identificacao{
+	font-family: 'Handlee', cursive;
+	background-color: #a9a9a9;
+	color: black;
+}
+.footer{
+	background-color: #a9a9a9;
+	color: black;		
+}
+a:link {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: none;
+  background-color: transparent;
+  text-decoration: none;
+}
+footer {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	
+}
+.footer-icones {
+	margin: 3px;
+}
