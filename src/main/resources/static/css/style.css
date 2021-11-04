@@ -1,6 +1,9 @@
+.corpo{
+	margin-botton: 400px;
+}
 .logo-container{
 	background-color: #a9a9a9;
-	color: black;
+	color: white;
 }
 .logo{
 	font-family: 'Handlee', cursive;
@@ -9,11 +12,11 @@
 #barra-identificacao{
 	font-family: 'Handlee', cursive;
 	background-color: #a9a9a9;
-	color: black;
+	color: white;
 }
 .footer{
 	background-color: #a9a9a9;
-	color: black;		
+	color: white;		
 }
 a:link {
   color: black;
@@ -42,7 +45,6 @@ footer {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
-	
 }
 .footer-icones {
 	margin: 3px;
