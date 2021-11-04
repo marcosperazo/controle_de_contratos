@@ -44,14 +44,19 @@
 				<li class="list-group-item list-group-item-secondary">E-mail do representante: <span th:text="${cliente.emailRepresentante}">e-mail</span></li>
 				<li class="list-group-item list-group-item-secondary">Observações: <span th:text="${cliente.observacao}">Observacoes</span></li>	
 			</ul>
-								
+			
+			<!-- Botões -->
+			<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+				<a th:href= @{/clientes/atualizar/{id}(id=${cliente.id})} type="button" class="btn btn-dark">atualizar cliente</a>						
+				<a th:href= @{/clientes/delete/{id}(id=${cliente.id})} type="button" class="btn btn-danger">excluir cliente</a>
+			</div>
+		
 		</div>
-		
-		
 		<!-- Footer -->
 		<footer>
 			<div th:replace="~{base :: footer}"></div>		
 		</footer>
+		
 	</body>
 
 

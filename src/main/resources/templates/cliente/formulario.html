@@ -29,7 +29,7 @@
 					   
 				    </div>  	
 			    	<div class="collapse navbar-collapse d-flex d-md-flex justify-content-md-end" >
-   						<a href="/clientes/formulario"><button class="btn btn-sm btn-outline-light" type="button">Novo</button></a>
+   						<a href="/clientes/formulario"><button class="btn btn-sm btn-outline-light" type="button">Salvar</button></a>
    					</div>
 			    	
 				</div>
@@ -48,8 +48,8 @@
 					</div>
 					
 					<div class="form-group mb-3">
-						<label for="nomeCliente" class="form-label mb-0">Nome</label>					
-						<input th:field="*{nomeCliente}" th:errorclass="is-invalid" class="form-control" placeholder="nome do cliente"/>					
+						<label for="nomeCliente" class="form-label mb-0">Nome</label>		
+						<input th:field="*{nomeCliente}" th:errorclass="is-invalid" class="form-control" placeholder="nome do cliente"/>							
 						<div th:errors="*{nomeCliente}" class="invalid-feedback"></div>
 										
 					</div>				
@@ -97,7 +97,7 @@
 					</div>
 					
 					<div>											
-						<button class="btn btn-secondary" type="submit">Cadastrar</button>
+						<button class="btn btn-secondary" type="submit">Salvar</button>
 					</div>
 				
 				</form>

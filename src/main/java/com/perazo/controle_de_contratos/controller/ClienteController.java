@@ -1,7 +1,6 @@
 package com.perazo.controle_de_contratos.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -13,7 +12,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
 
 import com.perazo.controle_de_contratos.dto.RequisicaoNovoCliente;
 import com.perazo.controle_de_contratos.model.Cliente;
@@ -60,6 +58,19 @@ public class ClienteController {
 		return "cliente/detalhescliente";
 	}
 		
+	@GetMapping("/delete/{id}")
+	public String deleteCliente(@PathVariable("id") Long id, Model model) {
+		Cliente cliente = clienteRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("id " + id + " é inválido"));
+		clienteRepository.delete(cliente);
+		return "redirect:/clientes";
+	}
 	
+	@GetMapping("/atualizar/{id}")
+	public String editarCliente(@PathVariable("id") Long id, Model model) {
+		Cliente cliente = clienteRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("id " + id + " é inválido"));
+		model.addAttribute("cliente", cliente);
+		return "cliente/formulario";
+	}
 	
+		
 }
