@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.perazo.controle_de_contratos.dto.RequisicaoNovoCliente;
+import com.perazo.controle_de_contratos.dto.RequisicaoCliente;
 import com.perazo.controle_de_contratos.model.Cliente;
 import com.perazo.controle_de_contratos.repository.ClienteRepository;
 
@@ -33,13 +33,13 @@ public class ClienteController {
 	}
 	
 	@GetMapping("/formulario")
-	public String formulario(RequisicaoNovoCliente requisicao) {
+	public String formulario(RequisicaoCliente requisicao) {
 		
 		return "cliente/formulario";
 	}
 	
 	@PostMapping("/novo")
-	public String novo(@Valid RequisicaoNovoCliente requisicao, BindingResult result) {
+	public String novo(@Valid RequisicaoCliente requisicao, BindingResult result) {
 		
 		if(result.hasErrors()) {
 			return "cliente/formulario";
@@ -65,11 +65,22 @@ public class ClienteController {
 		return "redirect:/clientes";
 	}
 	
-	@GetMapping("/atualizar/{id}")
-	public String editarCliente(@PathVariable("id") Long id, Model model) {
+	@GetMapping("/atualizarForm/{id}")
+	public String mostrarFormEditar(@PathVariable("id") Long id, Model model) {
 		Cliente cliente = clienteRepository.findById(id).orElseThrow(() -> new IllegalArgumentException("id " + id + " é inválido"));
 		model.addAttribute("cliente", cliente);
-		return "cliente/formulario";
+		return "cliente/form-editar";
+	}
+	
+	
+	@PostMapping("/update/{id}")
+	public String update(@PathVariable("id") long id, @Valid Cliente cliente, BindingResult result, Model model) {
+	    if (result.hasErrors()) {
+	        return "cliente/form-editar";
+	    }
+	    
+	    clienteRepository.save(cliente);
+	    return "redirect:/clientes";
 	}
 	
 		

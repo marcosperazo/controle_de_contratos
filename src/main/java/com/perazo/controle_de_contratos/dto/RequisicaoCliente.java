@@ -9,7 +9,7 @@ import javax.validation.constraints.Size;
 
 import com.perazo.controle_de_contratos.model.Cliente;
 
-public class RequisicaoNovoCliente {
+public class RequisicaoCliente {
 	
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
