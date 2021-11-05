@@ -10,7 +10,7 @@
 			<div class="container mb-5">
 				<div th:replace="~{base :: titulo('clientes')}"></div>
 				
-				<nav class="navbar navbar-expand navbar-dark bg-dark d-flex justify-content-between mb-3" style="background-color: #e3f2fd;">
+				<nav class="navbar navbar-expand navbar-dark bg-dark d-flex justify-content-between mb-3 shadow" style="background-color: #e3f2fd;">
 					<div class="container-fluid">
 						
 						<div class="collapse navbar-collapse">
@@ -29,7 +29,7 @@
 						   
 					    </div>  	
 				    	<div class="collapse navbar-collapse d-flex d-md-flex justify-content-md-end" >
-	   						<a href="/clientes/formulario"><button class="btn btn-sm btn-outline-light" type="button">Novo</button></a>
+	   						<a href="/clientes/formulario"><button class="btn btn-sm btn-secondary" type="button">Novo</button></a>
 	   					</div>			    	
 					</div>
 				</nav>
@@ -39,7 +39,7 @@
 					<!-- Lista de clientes -->
 					<ul class="list-group">
 					
-						<li th:each="cliente: ${clientes}" class="list-group-item list-group-item-action list-group-item-dark">
+						<li th:each="cliente: ${clientes}" class="list-group-item list-group-item-action list-group-item-dark shadow-lg">
 							
 							<a th:href= @{/clientes/{id}(id=${cliente.id})} class="list-group-item list-group-item-action list-group-item-dark">
 								<span th:text="${cliente.nome}">nome</span>
@@ -54,10 +54,8 @@
 		</div>
 		
 		
-		<!-- Footer -->
-		<footer>
-			<div th:replace="~{base :: footer}"></div>		
-		</footer>
+		<!-- Footer -->		
+		<footer th:replace="~{base :: footer}"></footer>
 		
 	</body>
 

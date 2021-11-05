@@ -10,7 +10,7 @@
 		<div class="container mb-5">
 			<div th:replace="~{base :: titulo(${cliente.nome})}"></div>
 			
-			<nav class="navbar navbar-expand navbar-dark bg-dark mb-3">
+			<nav class="navbar navbar-expand navbar-dark bg-dark mb-3 shadow">
 				<div class="container-fluid">
 					
 					<div class="collapse navbar-collapse">
@@ -33,7 +33,7 @@
 		
 		
 			<!-- Detalhes do Cliente -->
-			<ul class="list-group mb-3">
+			<ul class="list-group mb-3 shadow-lg">
 				<li class="list-group-item list-group-item-secondary">CPF: <span th:text="${cliente.cpf}">cpf</span></li>
 				<li class="list-group-item list-group-item-secondary">Nome: <span th:text="${cliente.nome}">nome</span></li>
 				<li class="list-group-item list-group-item-secondary">Identidade: <span th:text="${cliente.identidade}">identidade</span></li>
@@ -47,8 +47,8 @@
 			
 			<!-- Botões -->
 			<div class="d-grid gap-2 d-md-flex justify-content-md-end">
-				<a th:href= @{/clientes/atualizarForm/{id}(id=${cliente.id})} type="button" class="btn btn-dark">atualizar cliente</a>						
-				<a th:href= @{/clientes/delete/{id}(id=${cliente.id})} type="button" class="btn btn-danger">excluir cliente</a>
+				<a th:href= @{/clientes/atualizarForm/{id}(id=${cliente.id})} type="button" class="btn btn-dark shadow">atualizar cliente</a>						
+				<a th:href= @{/clientes/delete/{id}(id=${cliente.id})} type="button" class="btn btn-danger shadow">excluir cliente</a>
 			</div>
 			<div class="d-flex" style="height: 30px;">
 				<div class="vr"></div>
@@ -56,9 +56,8 @@
 		
 		</div>
 		<!-- Footer -->
-		<footer>
-			<div th:replace="~{base :: footer}"></div>		
-		</footer>
+		<!-- Footer -->		
+		<footer th:replace="~{base :: footer}"></footer>
 		
 	</body>
 

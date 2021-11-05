@@ -10,7 +10,7 @@
 
 			<div th:replace="~{base :: titulo('novo cliente')}"></div>
 			
-			<nav class="navbar navbar-expand navbar-dark bg-dark d-flex justify-content-between mb-3">
+			<nav class="navbar navbar-expand navbar-dark bg-dark d-flex mb-3 shadow">
 				<div class="container-fluid">
 					
 					<div class="collapse navbar-collapse">
@@ -28,9 +28,6 @@
 					    </div>	   	
 					   
 				    </div>  	
-			    	<div class="collapse navbar-collapse d-flex d-md-flex justify-content-md-end" >
-   						<a href="/clientes/formulario"><button class="btn btn-sm btn-outline-light" type="button">Novo</button></a>
-   					</div>
 			    	
 				</div>
 			</nav>
@@ -38,61 +35,61 @@
 		
 		
 		
-			<div class="card">	
+			<div class="card shadow">	
 				<form th:object="${requisicaoCliente}" class="card-body" action="/clientes/novo" method="post">
 				
 					<div class="form-group mb-3">
 						<label for="cpfCliente" class="form-label mb-0">CPF</label>						
-						<input th:field="*{cpfCliente}" th:errorclass="is-invalid" class="form-control" placeholder="000.000.000-00"/>						
+						<input th:field="*{cpfCliente}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="000.000.000-00"/>						
 						<div th:errors="*{cpfCliente}" class="invalid-feedback"></div>				
 					</div>
 					
 					<div class="form-group mb-3">
 						<label for="nomeCliente" class="form-label mb-0">Nome</label>		
-						<input th:field="*{nomeCliente}" th:errorclass="is-invalid" class="form-control" placeholder="nome do cliente"/>							
+						<input th:field="*{nomeCliente}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="nome do cliente"/>							
 						<div th:errors="*{nomeCliente}" class="invalid-feedback"></div>
 										
 					</div>				
 					
 					<div class="form-group mb-3">
 						<label for="identidadeCliente" class="form-label mb-0">Identidade</label>
-						<input th:field="*{identidadeCliente}" th:errorclass="is-invalid" class="form-control" placeholder="identidade do cliente"/>
+						<input th:field="*{identidadeCliente}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="identidade do cliente"/>
 						<div th:errors="*{identidadeCliente}" class="invalid-feedback"></div>			
 					</div>
 									
 					<div class="form-group mb-3">
 						<label for="emailCliente" class="form-label mb-0">E-Mail</label>						
-						<input th:field="*{emailCliente}" th:errorclass="is-invalid" class="form-control" placeholder="e-mail do cliente"/>
+						<input th:field="*{emailCliente}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="e-mail do cliente"/>
 						<div th:errors="*{emailCliente}" class="invalid-feedback"></div>			
 					</div>				
 					<div class="form-group mb-3">
 					
 						<label for="telefoneCliente" class="form-label mb-0">Telefone</label>						
-						<input th:field="*{telefoneCliente}" th:errorclass="is-invalid" class="form-control" placeholder="(00) 00000-0000"/>
+						<input th:field="*{telefoneCliente}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="(00) 00000-0000"/>
 						<div th:errors="*{telefoneCliente}" class="invalid-feedback"></div>					
 					</div>				
 					
 					<div class="form-group mb-3">
 						<label for="nomeRepresentanteCliente" class="form-label mb-0">Nome do representante</label>						
-						<input th:field="*{nomeRepresentanteCliente}" th:errorclass="is-invalid" class="form-control" placeholder="nome do representante do cliente"/>
+						<input th:field="*{nomeRepresentanteCliente}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="nome do representante do cliente"/>
 						<div th:errors="*{nomeRepresentanteCliente}" class="invalid-feedback"></div>				
 					</div>				
 					
 					<div class="form-group mb-3">
 						<label for="emailRepresentanteCliente" class="form-label mb-0">E-Mail do representante</label>					
-						<input th:field="*{emailRepresentanteCliente}" th:errorclass="is-invalid" class="form-control" placeholder="e-mail do representante do cliente"/>
+						<input th:field="*{emailRepresentanteCliente}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="e-mail do representante do cliente"/>
 						<div th:errors="*{emailRepresentanteCliente}" class="invalid-feedback"></div>			
 					</div>				
 					
 					<div class="form-group mb-3">
 						<label for="telefoneRepresentanteCliente" class="form-label mb-0">Telefone do representante</label>
-						<input th:field="*{telefoneRepresentanteCliente}" th:errorclass="is-invalid" class="form-control" placeholder="(00) 00000-0000"/>									
+						<input th:field="*{telefoneRepresentanteCliente}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="(00) 00000-0000"/>									
 						<div th:errors="*{telefoneRepresentanteCliente}" class="invalid-feedback"></div>	
 					</div>
 					
 					<div class="form-group mb-3">
 						<label for="observacaoCliente" class="form-label mb-0">Observações</label>										
-						<textarea th:field="*{observacaoCliente}" th:errorclass="is-invalid" class="form-control" placeholder="Observações"></textarea>									
+						<textarea th:field="*{observacaoCliente}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="Observações"></textarea>									
 						<div th:errors="*{observacaoCliente}" class="invalid-feedback"></div>
 					</div>
 					
@@ -102,16 +99,14 @@
 				
 				</form>
 			</div>
-			<div class="d-flex" style="height: 10px;">
+			<div class="d-flex" style="height: 30px;">
 				<div class="vr"></div>
 			</div>									
 		</div>
 		
 		
-		<!-- Footer -->
-		<footer>
-			<div th:replace="~{base :: footer}"></div>		
-		</footer>
+		<!-- Footer -->		
+		<footer th:replace="~{base :: footer}"></footer>
 		
 	</body>	
 </html>

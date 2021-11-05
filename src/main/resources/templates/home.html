@@ -10,7 +10,7 @@
 		<div class="container mb-5">
 			<div th:replace="~{base :: titulo('próximos reajustes')}"></div>
 			
-			<nav class="navbar navbar-expand navbar-dark bg-dark d-flex mb-3">
+			<nav class="navbar navbar-expand navbar-dark bg-dark d-flex mb-3 shadow">
 				<div class="container-fluid">
 					
 					<div class="collapse navbar-collapse">
@@ -35,10 +35,8 @@
 		<div class="d-flex" style="height: 50px;">
 			<div class="vr"></div>
 		</div>			
-		<!-- Footer -->
-		<footer>
-			<div th:replace="~{base :: footer}"></div>		
-		</footer>
+		<!-- Footer -->		
+		<footer th:replace="~{base :: footer}"></footer>
 		
 	</body>
 
