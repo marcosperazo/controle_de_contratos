@@ -20,13 +20,23 @@ public class Imovel {
 	private String apelido;
 	@Column(length = 20)
 	private String inscricaoMunicipal;
-	private String endereco;
+	@Column(length = 50)
+	private String matricula;
+	@Column(length = 255)
+	private String endereco;	
 	private BigDecimal valorCondominio;
 	private BigDecimal valorIPTU;
+	@Column(length = 255)
 	private String descricao;
+	@Column(length = 255)
 	private String observacao;
 	
-
+	public Long getId() {
+		return id;
+	}
+	public void setId(Long id) {
+		this.id = id;
+	}
 	public String getApelido() {
 		return apelido;
 	}
@@ -38,6 +48,12 @@ public class Imovel {
 	}
 	public void setInscricaoMunicipal(String inscricaoMunicipal) {
 		this.inscricaoMunicipal = inscricaoMunicipal;
+	}
+	public String getMatricula() {
+		return matricula;
+	}
+	public void setMatricula(String matricula) {
+		this.matricula = matricula;
 	}
 	public String getEndereco() {
 		return endereco;
