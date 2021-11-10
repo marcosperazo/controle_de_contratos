@@ -1,0 +1,112 @@
+<html>
+
+	<head th:replace="~{base :: head}"></head>
+	
+	<body>
+	
+		<div th:replace="~{base :: login}"></div>
+		
+		<div class="container mb-5">			
+
+			<div th:replace="~{base :: titulo('atualizar imóvel')}"></div>
+			
+			<nav class="navbar navbar-expand navbar-dark bg-dark d-flex mb-3 shadow">
+				<div class="container-fluid">
+					
+					<div class="collapse navbar-collapse">
+						<div class="navbar-nav">
+							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16" style="color: white">
+								<path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+								<path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+							</svg>			    	
+				     	</div>
+				     	<div class="navbar-nav">
+						    <a class="nav-link" href="/">Home</a>				        	
+						    <a class="nav-link" href="/clientes">Clientes</a>
+						    <a class="nav-link" href="/imoveis">Imóveis</a>				        		
+						    <a class="nav-link" href="/contratos">Contratos</a>
+					    </div>	   	
+					   
+				    </div>  	
+			    	
+				</div>
+			</nav>
+		
+		
+		
+		
+			<div class="card shadow">
+				<form class="card-body" action="#" 
+  					th:action="@{/imoveis/update/{id}(id=${imovel.id})}" 
+  					th:object="${imovel}" 
+  					method="post">
+  					
+  					
+				<!-- <form th:object="${requisicaoImovel}" class="card-body" action="/imoveis/update/" method="post"> -->
+				
+					<div class="form-group mb-3">
+						<label for="apelidoImovel" class="form-label mb-0">Apelido do Imóvel</label>						
+						<input th:field="*{apelido}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="apelido do imóvel"/>						
+						<div th:errors="*{apelido}" class="invalid-feedback"></div>				
+					</div>
+					
+					<div class="form-group mb-3">
+						<label for="enderecoImovel" class="form-label mb-0">Endereço</label>		
+						<input th:field="*{endereco}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="endereço do imóvel"/>							
+						<div th:errors="*{endereco}" class="invalid-feedback"></div>
+										
+					</div>				
+					
+					<div class="form-group mb-3">
+						<label for="inscricaoMunicipalImovel" class="form-label mb-0">Inscrição Municipal</label>
+						<input th:field="*{inscricaoMunicipal}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="inscrição municipal"/>
+						<div th:errors="*{inscricaoMunicipal}" class="invalid-feedback"></div>			
+					</div>
+									
+					<div class="form-group mb-3">
+						<label for="matriculaImovel" class="form-label mb-0">Matrícula do Imóvel</label>						
+						<input th:field="*{matricula}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="matrícula do imóvel"/>
+						<div th:errors="*{matricula}" class="invalid-feedback"></div>			
+					</div>				
+					<div class="form-group mb-3">
+					
+						<label for="valorCondominioImovel" class="form-label mb-0">Valor do Condomínio</label>						
+						<input th:field="*{valorCondominio}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="valor do condomínio"/>
+						<div th:errors="*{valorCondominio}" class="invalid-feedback"></div>					
+					</div>				
+					
+					<div class="form-group mb-3">
+						<label for="valorIPTUImovel" class="form-label mb-0">Valor do IPTU</label>						
+						<input th:field="*{valorIPTU}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="valor do IPTU"/>
+						<div th:errors="*{valorIPTU}" class="invalid-feedback"></div>				
+					</div>				
+					
+					<div class="form-group mb-3">
+						<label for="descricaoImovel" class="form-label mb-0">Descrição do Imóvel</label>					
+						<textarea th:field="*{descricao}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="descrição do imóvel"></textarea>
+						<div th:errors="*{descricao}" class="invalid-feedback"></div>			
+					</div>				
+					
+					<div class="form-group mb-3">
+						<label for="observacaoImovel" class="form-label mb-0">Observações</label>										
+						<textarea th:field="*{observacao}" th:errorclass="is-invalid" class="form-control shadow-sm" placeholder="Observações"></textarea>									
+						<div th:errors="*{observacao}" class="invalid-feedback"></div>
+					</div>
+					
+					<div>											
+						<button class="btn btn-secondary" type="submit">Salvar</button>
+					</div>
+				
+				</form>
+			</div>
+			<div class="d-flex" style="height: 40px;">
+				<div class="vr"></div>
+			</div>						
+		</div>
+		
+		
+		<!-- Footer -->		
+		<footer th:replace="~{base :: footer}"></footer>
+		
+	</body>	
+</html>
