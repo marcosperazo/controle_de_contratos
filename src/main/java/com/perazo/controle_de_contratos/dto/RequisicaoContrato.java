@@ -69,16 +69,15 @@ public class RequisicaoContrato {
 		
 		Contrato contrato = new Contrato();
 		
-		contrato.setCliente(null);;
-		contrato.setImovel(null);
+		contrato.setCliente(requisicaoCliente.toCliente());;
+		contrato.setImovel(requisicaoImovel.toImovel());
 		contrato.setValorAluguel(valorAluguelContrato);
 		contrato.setDataContratacao(dataContratacaoContrato);
 		contrato.setDataFim(dataFimContrato);
 		contrato.setDataPagamento(dataPagamentoContrato);
 		contrato.setDataReajuste(dataReajusteContrato);
 		contrato.setValorAluguel(valorAluguelContrato);
-		
-		
+				
 		return contrato;
 	}
 }
